@@ -24,7 +24,7 @@ public class Sort {
                     lowest = i+j;
                 }
             }
-            SortingUtilis.swap(arr,i,lowest);
+            SortingUtilis.swap(testArr,i,lowest);
         }
     return testArr;
 

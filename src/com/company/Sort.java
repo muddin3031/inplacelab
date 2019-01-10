@@ -16,20 +16,17 @@ public class Sort {
         }
 
         public static int[] SelectionSort(int[] testArr){
-            int lowest=0;
-            for(int count = 0; count < testArr.length; count++) {
-                lowest=count;
-                for (int n = 0; n < testArr.length; n++) {
-                    if(testArr[lowest]<testArr[n])
-                    {
-                        lowest=n;
-                    }
-                    SortingUtilis.swap(testArr,lowest,count);
+            int lowest = 0;
+        for(int i=0; i<testArr.length-1;i++){
+            lowest = i;
+            for(int j=1; j<testArr.length-i;j++){
+                if(arr[lowest]>testArr[i+j]){
+                    lowest = i+j;
                 }
-
             }
-            return testArr;
+            SortingUtilis.swap(arr,i,lowest);
         }
+    return testArr;
 
 
 }

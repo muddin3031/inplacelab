@@ -3,18 +3,29 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        int[] testArr = {8, 6, 7, 5, 3, 0, 9, 10, 1, 2, 3};
+        int[] testArr = SortingUtilis.randomIntArr(10);
+
         System.out.print("Before: ");
         for (int num : testArr)
             System.out.print(num + " ");
         System.out.println();
 
-        BubbleSort.bubbleSort(testArr);
+        long time = System.nanoTime();
+        Sort.SelectionSort(testArr);
+        time = System.nanoTime() - time;
+
         System.out.print("After: ");
-        for (int num : testArr) {
+        for (int num : testArr)
             System.out.print(num + " ");
-            System.out.println();
+        System.out.println();
+        System.out.println("Time taken: " + time);
+
+        if(SortingUtilis.isSorted(testArr)){
+            System.out.println("Your list is sorted");
         }
+        else System.out.println("Your list is not sorted.");
     }
-}
+    }
+
+
 

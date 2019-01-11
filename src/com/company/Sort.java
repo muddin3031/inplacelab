@@ -29,4 +29,21 @@ public class Sort {
     return testArr;
 
         }
+    public static int[] insertionSort(int[] testArr){
+
+        for(int x=1; x<testArr.length;x++){
+            for(int y=x; y>0;y--){
+
+               if (testArr[y]<testArr[y-1])
+               {
+                   SortingUtilis.swap(testArr,y,y-1);
+               }
+            }
+
+        }
+        return testArr;
+
+    }
+
+
 }

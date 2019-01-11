@@ -11,7 +11,7 @@ public class Main {
         System.out.println();
 
         long time = System.nanoTime();
-        Sort.SelectionSort(testArr);
+        Sort.insertionSort(testArr);
         time = System.nanoTime() - time;
 
         System.out.print("After: ");
